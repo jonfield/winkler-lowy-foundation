@@ -12,7 +12,6 @@ body {
     line-height: 27px;
     letter-spacing: 0;
     color: #333;
-    background-color: #f8f8f8;
 }
 
 .container {
@@ -48,7 +47,7 @@ header .container {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     min-height: 80vh;
     position: relative;
     padding: 80px 0;
@@ -96,11 +95,12 @@ header .container {
     letter-spacing: 0;
     color: #666;
     text-align: justify;
+    text-wrap: pretty;
 }
 
 /* Initiatives section */
 .initiatives {
-    background-color: #f8f8f8;
+
     padding: 80px 0;
 }
 
@@ -113,7 +113,7 @@ header .container {
     color: #2B99B6;
     margin-bottom: 60px;
     text-align: center;
-    text-transform: uppercase;
+
 }
 
 .initiative-card {
@@ -122,7 +122,7 @@ header .container {
 
 .card-content {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     gap: 60px;
     align-items: center;
     background-color: white;
@@ -131,7 +131,7 @@ header .container {
 }
 
 .initiative-card.reverse .card-content {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 400px;
 }
 
 .initiative-card.reverse .card-text {
@@ -143,7 +143,7 @@ header .container {
 }
 
 .card-image {
-    height: 300px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -166,7 +166,7 @@ header .container {
     letter-spacing: 6px;
     color: #2B99B6;
     margin-bottom: 20px;
-    text-transform: uppercase;
+
 }
 
 .card-text p {
@@ -177,6 +177,7 @@ header .container {
     letter-spacing: 0;
     color: #666;
     text-align: justified;
+    text-wrap: pretty;
 }
 
 /* Footer */
@@ -188,9 +189,9 @@ footer {
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 90px;
     width: auto;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     filter: brightness(0) invert(1);
 }
 
@@ -199,21 +200,46 @@ footer p {
     opacity: 0.8;
     letter-spacing: 1px;
 }
+.footer-links,
+.footer-links a {
+    font-size: 12px;
+    font-style: italic;
+      text-decoration: none;
+      color: #D3D1D1;
+}
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-links span {
+    font-style: normal;
+    padding: 0 10px;
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
     .mission {
         min-height: 60vh;
         padding: 60px 0;
+        margin-bottom:120px;
     }
     
     .mission-content {
         min-height: calc(60vh - 120px);
+        bottom: -10rem;
+        align-items: flex-end;
     }
     
     .mission-text {
         max-width: 100%;
         padding: 30px;
+        background-color: rgba(242, 242, 242, 0.90);
+    }
+    .mission-text h1 {
+        margin-bottom: 20px;
+    }
+    .mission-text p {
+        line-height: 1.75;
     }
     
     .card-content,
@@ -222,9 +248,11 @@ footer p {
         gap: 0;
     }
     
-    .initiative-card.reverse .card-text,
+    .initiative-card.reverse .card-text {
+        order: 2;
+    }
     .initiative-card.reverse .card-image {
-        order: initial;
+        order: 1;
     }
     
     .card-image {
@@ -256,16 +284,26 @@ footer p {
     .logo h1 {
         font-size: 16px;
     }
-    
+    .mission {
+        margin-bottom: 160px;
+    }
+    .mission-content {
+        bottom: -15rem;
+    }
+    .mission-text {
+        padding: 30px 30px 20px;
+    }
     .mission-text h2,
     .initiatives h2 {
-        font-size: 12px;
-        letter-spacing: 2px;
+        font-size: 24px;
+        letter-spacing: 0.2em;
+        margin: 10px 0;
     }
     
     .card-text h3 {
-        font-size: 14px;
-        letter-spacing: 1px;
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin: 10px 0;
     }
     
     .card-text {
