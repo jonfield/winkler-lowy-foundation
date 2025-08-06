@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="fade-only">
         <div class="container">
             <div class="logo">
                 <img src="svg/logo.svg" alt="Winkler Lowy Foundation">
@@ -22,9 +22,9 @@
         <section class="mission">
             <div class="container">
                 <div class="mission-content">
-                    <div class="mission-text">
+                    <div class="mission-text fade-in fade-in-delay-1">
                         <h1>MISSION</h1>
-                        <p>Founded by Janine Winkler Lowy and her family, The Winkler Lowy Foundation’s primary mission is to support Jewish education, focusing on strengthening existing programs and developing new initiatives to address the evolving needs of the Jewish community. The foundation also supports efforts that foster meaningful connections with Israel and enhance educational opportunities for individuals facing financial or systemic barriers.</p>
+                        <p>Founded by Janine Winkler Lowy and her family, The Winkler Lowy Foundation's primary mission is to support Jewish education, focusing on strengthening existing programs and developing new initiatives to address the evolving needs of the Jewish community. The foundation also supports efforts that foster meaningful connections with Israel and enhance educational opportunities for individuals facing financial or systemic barriers.</p>
                     </div>
                 </div>
             </div>
@@ -32,9 +32,9 @@
 
         <section class="initiatives">
             <div class="container">
-                <h2>INITIATIVES</h2>
+                <h2 class="fade-in">INITIATIVES</h2>
                 
-                <div class="initiative-card">
+                <div class="initiative-card fade-in-left">
                     <div class="card-content">
                         <div class="card-image">
                             <img src="images/jewish-schools.jpg" alt="Open Hebrew book">
@@ -46,11 +46,11 @@
                     </div>
                 </div>
 
-                <div class="initiative-card reverse">
+                <div class="initiative-card reverse fade-in-right">
                     <div class="card-content">
                         <div class="card-text">
                             <h3>Jewish Summer Camps</h3>
-                            <p><strong>Keeping kids in the bunk!</strong> <br>The Winkler Lowy Foundation recognizes the lasting impact of Jewish summer camp on personal growth, community building, and Jewish identity. Through its support of the LA Federation’s Camp Initiative, the foundation helps teens have continued opportunities to return to camp beyond 8th grade when many drop off. By providing resources and support throughout high school, the foundation helps maintain these important connections, allowing young people to keep benefiting from the unique experience and values that Jewish summer camp offers.</p>
+                            <p><strong>Keeping kids in the bunk!</strong> <br>The Winkler Lowy Foundation recognizes the lasting impact of Jewish summer camp on personal growth, community building, and Jewish identity. Through its support of the LA Federation's Camp Initiative, the foundation helps teens have continued opportunities to return to camp beyond 8th grade when many drop off. By providing resources and support throughout high school, the foundation helps maintain these important connections, allowing young people to keep benefiting from the unique experience and values that Jewish summer camp offers.</p>
                         </div>
                         <div class="card-image">
                             <img src="images/summer-camps.jpg" alt="Group of young people at camp">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <div class="initiative-card">
+                <div class="initiative-card fade-in-left">
                     <div class="card-content">
                         <div class="card-image">
                             <img src="images/israel.jpg" alt="Young person smiling">
@@ -73,15 +73,74 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
         <div class="container">
             <div class="footer-logo">
                 <img src="svg/logo.svg" alt="Winkler Lowy Foundation">
             </div>
-            <p>We don’t accept unsolicited requests for funding.</p>
+            <p>We don't accept unsolicited requests for funding.</p>
             <br>
             <p class="footer-links"><a href="/">Privacy Policy</a>   <span>|</span>   Copyright@2025 Winkler Lowy Foundation</p>
         </div>
     </footer>
+
+    <script>
+        // Function to check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // More generous viewport check for animations
+        function isNearViewport(element) {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            return (
+                rect.top <= windowHeight * 0.8 && 
+                rect.bottom >= 0
+            );
+        }
+
+        // Function to animate elements
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-only');
+            
+            elements.forEach(element => {
+                if (isNearViewport(element)) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Trigger animations on page load
+        window.addEventListener('load', () => {
+            // Small delay to ensure everything is loaded
+            setTimeout(() => {
+                animateOnScroll();
+            }, 100);
+        });
+
+        // Trigger animations on scroll
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    animateOnScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initial check in case elements are already in view
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(animateOnScroll, 100);
+        });
+    </script>
 </body>
 </html>
