@@ -1,0 +1,274 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    padding: 20px 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 100;
+    transform: translateX(-50%);
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Mission section */
+.mission {
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    min-height: 80vh;
+    position: relative;
+    padding: 80px 0;
+}
+
+.mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: calc(80vh - 160px);
+}
+
+.mission-text {
+    max-width: 400px;
+    background-color: rgba(242, 242, 242, 0.80);
+    padding: 40px;
+}
+
+.mission-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.23em;
+    color: #2B99B6;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.mission-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0;
+    color: #666;
+    text-align: justify;
+}
+
+/* Initiatives section */
+.initiatives {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.initiatives h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.23em;
+    color: #2B99B6;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.initiative-card {
+    margin-bottom: 60px;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+    background-color: white;
+    padding: 0;
+    border-radius: 0;
+}
+
+.initiative-card.reverse .card-content {
+    grid-template-columns: 1fr 300px;
+}
+
+.initiative-card.reverse .card-text {
+    order: 1;
+}
+
+.initiative-card.reverse .card-image {
+    order: 2;
+}
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.card-text {
+    padding: 40px;
+}
+
+.card-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 6px;
+    color: #2B99B6;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0;
+    color: #666;
+    text-align: justified;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+footer p {
+    font-size: 12px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .mission {
+        min-height: 60vh;
+        padding: 60px 0;
+    }
+    
+    .mission-content {
+        min-height: calc(60vh - 120px);
+    }
+    
+    .mission-text {
+        max-width: 100%;
+        padding: 30px;
+    }
+    
+    .card-content,
+    .initiative-card.reverse .card-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .initiative-card.reverse .card-text,
+    .initiative-card.reverse .card-image {
+        order: initial;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+    
+    .card-text {
+        padding: 30px;
+    }
+    
+    .mission {
+        padding: 60px 0;
+    }
+    
+    .initiatives {
+        padding: 60px 0;
+    }
+    
+    footer {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 16px;
+    }
+    
+    .mission-text h2,
+    .initiatives h2 {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    
+    .card-text h3 {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    
+    .card-text {
+        padding: 20px;
+    }
+}
