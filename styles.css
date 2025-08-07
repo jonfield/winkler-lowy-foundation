@@ -12,6 +12,7 @@ body {
     line-height: 27px;
     letter-spacing: 0;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* Animation styles */
@@ -102,7 +103,6 @@ header .container {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* filter: grayscale(100%); */
     min-height: 80vh;
     position: relative;
     padding: 80px 0;
@@ -123,11 +123,13 @@ header .container {
     display: flex;
     align-items: center;
     min-height: calc(80vh - 160px);
+        min-height: auto;
+    margin-top: 3rem;
 }
 
 .mission-text {
     max-width: 400px;
-    background-color: rgba(242, 242, 242, 0.80);
+    background-color: rgba(242, 242, 242, 0.10);
     padding: 40px;
 }
 
@@ -274,21 +276,27 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
     .mission {
-        min-height: 60vh;
+        min-height: 850px;
         padding: 60px 0;
-        margin-bottom:120px;
+        /* margin-bottom:120px; */
+        background-image: url('images/hero-image-m.jpg');
+        background-position: bottom;
     }
     
     .mission-content {
         min-height: calc(60vh - 120px);
-        bottom: -10rem;
-        align-items: flex-end;
+        align-items: flex-start;
+        padding-top: 5rem;
+        text-align: center;
+        bottom: unset;
+        margin-top: 0;
+
     }
     
     .mission-text {
         max-width: 100%;
         padding: 30px;
-        background-color: rgba(242, 242, 242, 0.90);
+        background-color: rgba(242, 242, 242, 0.0);
     }
     .mission-text h1 {
         margin-bottom: 20px;
