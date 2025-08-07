@@ -104,7 +104,7 @@ header .container {
 
 nav {
     position: absolute;
-    right: 0;
+    right: 2rem;
 }
 
 nav a {
@@ -524,6 +524,17 @@ footer p {
         line-height: 24px;
     }
     
+
+    header .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container nav {
+        position: unset;
+    }
+    header .container svg {
+        height: 60px
+    }
 }
 
 @media (max-width: 480px) {
