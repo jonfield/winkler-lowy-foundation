@@ -548,9 +548,9 @@ footer p {
     .mission {
         margin-bottom: 160px;
     }
-    .mission-content {
+    /* .mission-content {
         bottom: -15rem;
-    }
+    } */
     .mission-text {
         padding: 30px 30px 20px;
     }
