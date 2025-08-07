@@ -9,7 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 26px;
     letter-spacing: 0;
     color: #333;
     overflow-x: hidden;
@@ -80,21 +80,61 @@ body {
 header {
     padding: 20px 0;
     position: absolute;
-    left: 50%;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 100;
-    transform: translateX(-50%);
 }
 
 header .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    width: 100%;
+    position: relative;
+    max-width: 1310px;
+}
+.logo {
+    padding-top: 1rem;
+}
+.logo svg {
+    height: 80px;
+    width: auto;
 }
 
-.logo img {
-    height: 60px;
-    width: auto;
+nav {
+    position: absolute;
+    right: 0;
+}
+
+nav a {
+    /* background-color: #2B99B6; */
+    background-color: rgba(43, 153, 182, 0.3);
+    border: 1px solid rgba(43, 153, 182, 0.45);
+    color: white;
+    padding: 15px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+.news nav a {
+    background-color: #2B99B6;
+    border: 1px solid #2B99B6;
+}
+nav a:hover {
+    background-color: #236a7f;
+    color: white;
+    text-decoration: none;
+}
+
+.news nav a:hover {
+    border: 1px solid #236a7f;
 }
 
 /* Mission section */
@@ -135,7 +175,7 @@ header .container {
 
 .mission-text h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.23em;
@@ -148,7 +188,7 @@ header .container {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 26px;
     letter-spacing: 0;
     color: #666;
     text-align: justify;
@@ -163,7 +203,7 @@ header .container {
 
 .initiatives h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.23em;
@@ -217,7 +257,7 @@ header .container {
 
 .card-text h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 6px;
@@ -230,7 +270,7 @@ header .container {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 26px;
     letter-spacing: 0;
     color: #666;
     text-align: justified;
@@ -271,6 +311,128 @@ footer p {
 .footer-links span {
     font-style: normal;
     padding: 0 10px;
+}
+
+/* News page styles */
+.news-hero {
+    background-image: url('images/news/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    max-height: 550px;
+    position: relative;
+}
+
+.news-intro {
+    padding: 80px 0 50px 0;
+    text-align: center;
+}
+
+.news-intro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.23em;
+    color: #2B99B6;
+    text-transform: uppercase;
+}
+
+.news-articles {
+    padding: 40px 0 80px 0;
+    background-color: white;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 40px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 485px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.news-image {
+    width: 485px;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.news-content {
+    padding: 10px 25px;
+}
+
+.news-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color: #2B99B6;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.news-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 20px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-style: italic;
+}
+
+.news-content p span {
+    font-style: normal;
+}
+
+.read-more {
+    background-color: #2B99B6;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.read-more:hover {
+    background-color: #236a7f;
+    color: white;
+    text-decoration: none;
+}
+
+.news .logo svg path {
+    fill: white;
 }
 
 /* Responsive design */
@@ -337,6 +499,31 @@ footer p {
     footer {
         padding: 40px 0;
     }
+    
+    .news-hero {
+        height: 400px;
+        max-height: 400px;
+    }
+    
+    .news-intro {
+        padding: 40px 0 30px 0;
+    }
+    
+    .news-articles {
+        padding: 30px 0 60px 0;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .news-content h2 {
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        line-height: 24px;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -372,4 +559,29 @@ footer p {
     .card-text {
         padding: 20px;
     }
+    
+    .news-hero {
+        height: 350px;
+        max-height: 350px;
+    }
+    
+    .news-intro h1 {
+        font-size: 24px;
+        letter-spacing: 0.2em;
+    }
+    
+    .news-intro {
+        padding: 30px 0 20px 0;
+    }
+    
+    .news-grid {
+        gap: 30px;
+    }
+    
+    .news-content h2 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+
 }

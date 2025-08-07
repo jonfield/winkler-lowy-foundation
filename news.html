@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2B99B6">
-    <title>Winkler Lowy Foundation</title>
+    <title>News - Winkler Lowy Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="news">
     <header class="fade-only">
         <div class="container">
             <div class="logo">
                 <a href="/">
                     <!-- <img src="svg/logo.svg" alt="Winkler Lowy Foundation"> -->
-                    <svg width="281" height="85" viewBox="0 0 281 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg width="281" height="85" viewBox="0 0 281 85" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_17_2)">
                         <path d="M61.3963 84.9174V74.438H68.6528V75.3959H62.514V84.9174H61.3963ZM62.3972 80.4746V79.5167H67.9938V80.4746H62.3972Z" fill="#3F3F3F"/>
                         <path d="M81.5058 85C80.7135 85 79.9711 84.8679 79.2955 84.6036C78.6199 84.3394 78.0277 83.9678 77.5273 83.4805C77.0269 82.9933 76.6432 82.4318 76.3596 81.7876C76.0844 81.1435 75.9426 80.4416 75.9426 79.6736C75.9426 78.9056 76.0844 78.1954 76.3596 77.5595C76.6348 76.9154 77.0269 76.3538 77.5273 75.8666C78.0277 75.3794 78.6116 75.0078 79.2872 74.7435C79.9628 74.4793 80.7051 74.3471 81.5058 74.3471C82.3066 74.3471 83.0405 74.4793 83.7161 74.7435C84.3917 75.0078 84.9756 75.3794 85.476 75.8584C85.9765 76.3373 86.3602 76.8989 86.6437 77.5513C86.919 78.2036 87.0608 78.9056 87.0608 79.6736C87.0608 80.4416 86.919 81.1518 86.6437 81.7959C86.3685 82.4483 85.9765 83.0098 85.476 83.4888C84.9756 83.9678 84.3917 84.3394 83.7161 84.6036C83.0405 84.8679 82.3066 85 81.5058 85ZM81.5058 84.009C82.1397 84.009 82.7236 83.9017 83.2657 83.687C83.8079 83.4723 84.275 83.1667 84.6753 82.7703C85.0757 82.374 85.3843 81.9198 85.6012 81.3912C85.8264 80.871 85.9348 80.2929 85.9348 79.6653C85.9348 79.0377 85.8264 78.4596 85.6012 77.9394C85.376 77.4191 85.0673 76.9567 84.6753 76.5603C84.275 76.1639 83.8079 75.8666 83.2657 75.6436C82.7236 75.4289 82.1397 75.3216 81.5058 75.3216C80.872 75.3216 80.2798 75.4289 79.7376 75.6436C79.1955 75.8584 78.72 76.1639 78.328 76.5603C77.9277 76.9567 77.6191 77.4109 77.3939 77.9394C77.1687 78.4596 77.0519 79.0377 77.0519 79.6653C77.0519 80.2929 77.1687 80.8545 77.3939 81.383C77.6191 81.9115 77.936 82.374 78.328 82.7703C78.7284 83.1667 79.1955 83.4723 79.7376 83.687C80.2798 83.9017 80.872 84.009 81.5058 84.009Z" fill="#3F3F3F"/>
@@ -46,6 +46,7 @@
                         </clipPath>
                         </defs>
                     </svg>
+
                 </a>
             </div>
             <nav>
@@ -55,55 +56,61 @@
     </header>
 
     <main>
-        <section class="mission">
+        <section class="news-hero">
+        </section>
+
+        <section class="news-intro">
             <div class="container">
-                <div class="mission-content">
-                    <div class="mission-text fade-in fade-in-delay-1">
-                        <h1>MISSION</h1>
-                        <p>Founded by Janine Winkler Lowy and her family, The Winkler Lowy Foundation's primary mission is to support Jewish education, focusing on strengthening existing programs and developing new initiatives to address the evolving needs of the Jewish community. The foundation also supports efforts that foster meaningful connections with Israel and enhance educational opportunities for individuals facing financial or systemic barriers.</p>
-                    </div>
-                </div>
+                <h1 class="fade-in">NEWS</h1>
             </div>
         </section>
 
-        <section class="initiatives">
+        <section class="news-articles">
             <div class="container">
-                <h2 class="fade-in">INITIATIVES</h2>
-                
-                <div class="initiative-card fade-in-left">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <img src="images/jewish-schools.jpg" alt="Open Hebrew book">
+                <div class="news-grid">
+                    <article class="news-card fade-in-left">
+                        <div class="news-image">
+                            <img src="images/news/fahthers-day-sending-love.jpg" alt="Father's Day - Sending Love From The Bimah">
                         </div>
-                        <div class="card-text">
-                            <h3>Jewish Schools</h3>
-                            <p>The Winkler Lowy Foundation supports Jewish schools and professionals by ensuring that families committed to Jewish education, who are also shaping it through their professional lives, receive the support and access needed for their children to fully benefit from a meaningful and enriching Jewish educational journey.</p>
+                        <div class="news-content">
+                            <h2>Father's Day: Sending Love From The Bimah</h2>
+                            <p>Jewish Journal <span>|</span> June 17, 2015 <span>|</span> by Ellie Kahn</p>
+                            <a href="https://jewishjournal.com/culture/175087/" target="_blank" class="read-more">READ MORE</a>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="initiative-card reverse fade-in-right">
-                    <div class="card-content">
-                        <div class="card-text">
-                            <h3>Jewish Summer Camps</h3>
-                            <p><strong>Keeping kids in the bunk!</strong> <br>The Winkler Lowy Foundation recognizes the lasting impact of Jewish summer camp on personal growth, community building, and Jewish identity. Through its support of the LA Federation's Camp Initiative, the foundation helps teens have continued opportunities to return to camp beyond 8th grade when many drop off. By providing resources and support throughout high school, the foundation helps maintain these important connections, allowing young people to keep benefiting from the unique experience and values that Jewish summer camp offers.</p>
+                    <article class="news-card fade-in-right">
+                        <div class="news-image">
+                            <img src="images/news/the-winkler-lowys-first-major-gift.jpg" alt="The Winkler Lowy's First Major Gift Is A Creative Camp Grant">
                         </div>
-                        <div class="card-image">
-                            <img src="images/summer-camps.jpg" alt="Group of young people at camp">
+                        <div class="news-content">
+                            <h2>The Winkler Lowy's First Major Gift Is A 'creative' Camp Grant</h2>
+                            <p>Jewish Insider <span>|</span> April 8, 2021 <span>|</span> by Helen Chernikoff</p>
+                            <a href="https://ejewishphilanthropy.com/the-winkler-lowys-first-major-gift-is-a-creative-camp-grant/" target="_blank" class="read-more">READ MORE</a>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="initiative-card fade-in-left">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <img src="images/israel.jpg" alt="Young person smiling">
+                    <article class="news-card fade-in-left">
+                        <div class="news-image">
+                            <img src="images/news/conversation-with-janine-lowy.jpg" alt="Conversation with Janine Lowy: The Importance Of Jewish Summer Camps">
                         </div>
-                        <div class="card-text">
-                            <h3>Israel</h3>
-                            <p>The Winkler Lowy Foundation is dedicated to expanding career opportunities in Israel for individuals facing barriers to access. Through its dedication to higher education and career development programs, the foundation supports pathways for individuals from historically underrepresented backgrounds such as women and new immigrants, ensuring that financial limitations do not hinder their ability to thrive in the professional world after the army.</p>
+                        <div class="news-content">
+                            <h2>A Conversation with Janine Lowy: The Importance Of Jewish Summer Camps</h2>
+                            <p>Jewish Business News <span>|</span> October 3, 2023 <span>|</span> Contributing Author</p>
+                            <a href="https://jewishbusinessnews.com/2023/10/03/the-importance-of-jewish-summer-camps/" target="_blank" class="read-more">READ MORE</a>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="news-card fade-in-right">
+                        <div class="news-image">
+                            <img src="images/news/should-next-year.jpg" alt="Should Next Year in Jerusalem Be An Imperative?">
+                        </div>
+                        <div class="news-content">
+                            <h2>Should Next Year in Jerusalem Be An Imperative?</h2>
+                            <p>The Jerusalem Post <span>|</span> March 23, 2025 <span>|</span> by Janine Lowy</p>
+                            <a href="https://www.jpost.com/opinion/article-847135" target="_blank" class="read-more">READ MORE</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
